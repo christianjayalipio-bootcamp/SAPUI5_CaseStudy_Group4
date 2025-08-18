@@ -1,0 +1,60 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="detailview.controller.DetailView">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Panel id="orderdetailpnl" headerText="Order Detail" class="sapUiResponsiveMargin" width="auto">
+                <VBox id="ordernumber" class="sapUiSmallMargin" alignItems="Center">
+                    <HBox id="HBox1">
+                        <Label id="ordernumlbl" text="Order Number:" width="150px" textAlign="End"/>
+                        <Text id="Text1" text="{OrderDetail>/OrderID}" class="boldText"/>
+                    </HBox>
+                    <HBox id="HBox2">
+                        <Label id="createdonlbl" text="Created On:" width="150px" textAlign="End"/>
+                        <Text id="Text2" text="{OrderDetail>/CreationDate}"/>
+                    </HBox>
+                    <HBox id="HBox3">
+                        <Label id="receivingplantlbl" text="Receiving Plant:" width="150px" textAlign="End"/>
+                        <Text id="Text3" text="{OrderDetail>/ReceivingPlant}"/>
+                    </HBox>
+                    <HBox id="HBox4">
+                        <Label id="delplantlbl" text="Delivering Plant:" width="150px" textAlign="End"/>
+                        <Text id="Text4" text="{OrderDetail>/DeliveringPlant}"/>
+                    </HBox>
+                    <HBox id="HBox5">
+                        <Label id="statuslbl" text="Status:" width="150px" textAlign="End"/>
+                        <Text id="Text5" text="{OrderDetail>/Status}" class="boldText"/>
+                    </HBox>
+                </VBox>
+            </Panel>
+
+            <Panel width="auto" id="panel3" headerText="Product" class="sapUiResponsiveMargin">
+                <Table id="productTable" inset="false" items="{OrderDetail>/Products}">
+                    <columns>
+                        <Column id="prodCol"><Text id="prodname" text="Product Name"/></Column>
+                        <Column id="qtyCol" hAlign="Center"><Text id="qty" text="Quantity"/></Column>
+                        <Column id="priceCol" hAlign="End"><Text id="price" text="Price Per Quantity"/></Column>
+                        <Column id="totalCol" hAlign="End"><Text id="total" text="Total Price"/></Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem id="ColListItem">
+                            <cells>
+                                <Text id="text1" text="{OrderDetail>ProductName}"/>
+                                <Text id="text2" text="{OrderDetail>Quantity}"/>
+                                <Text id="text3" text="{OrderDetail>UnitPrice}"/>
+                                <Text id="text4" text="{ parts: [ {path: 'OrderDetail>UnitPrice'}, {path: 'OrderDetail>Quantity'} ], formatter: '.formatter.calculateTotalPrice'}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+        </content>
+        <footer>
+            <OverflowToolbar class="sapContrast sapContrastPlus" width="100%" id="toolbar4">
+                <content>
+                    <ToolbarSpacer id="spacer0"/>
+                    <Button text="Edit" id="button0"/>
+                    <Button text="Cancel" id="button1"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
