@@ -79,12 +79,49 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "RouteCreateOrder",
+          "pattern": "createorder",
+          "target": [
+            "TargetCreateOrder"
+          ]
+        },
+        {
+          "name": "RouteDetailOrder",
+          "pattern": "detailorder",
+          "target": [
+            "TargetDetailOrder"
+          ]
+        },
+        {
+          "name": "RouteEditOrder",
+          "pattern": "editorder",
+          "target": [
+            "TargetEditOrder"
+          ]
         }
       ],
       "targets": {
         "TargetMainView": {
           "id": "MainView",
-          "name": "MainView"
+          "name": "MainView",
+          "level": 0
+        },
+        "TargetCreateOrder": {
+          "id": "CreateOrder",
+          "name": "CreateOrder",
+          "level": 1
+        },
+        "TargetDetailOrder": {
+          "id": "DetailOrder",
+          "name": "DetailOrder",
+          "level": 1
+        },
+        "TargetEditOrder": {
+          "id": "EditOrder",
+          "name": "EditOrder",
+          "level": 1
         }
       }
     },
