@@ -5,10 +5,6 @@ sap.ui.define([
 
     return Controller.extend("com.sapui5.casestudy.group4.project1.controller.MainView", {
         onInit: function () {
-            const oPage = this.byId("page0");
-            if (oPage) {
-                oPage.setFloatingFooter(!oPage.getFloatingFooter());
-            }
         },
 
         onCreateOrder: function () {
