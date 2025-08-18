@@ -78,7 +78,9 @@
                                 <HBox>
                                     <Button
                                         text="Go"
+                                        tooltip="Edit Order"
                                         class="sapUiTinyMarginEnd"
+                                        press="onEditOrder"
                                     />
                                     <Button text="Clear" />
                                 </HBox>
@@ -142,6 +144,7 @@
                             />
                             <Button
                                 text="Details"
+                                tooltip="Details"
                                 press="onRowNavigate"
                             />
                         </cells>

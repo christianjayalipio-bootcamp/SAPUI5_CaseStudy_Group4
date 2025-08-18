@@ -12,8 +12,16 @@ sap.ui.define([
         // Triggered when "Add" button in toolbar is pressed
         onAddOrder: function () {
             var oRouter = UIComponent.getRouterFor(this);
-            oRouter.navTo("RouteView2"); // Navigate to target route
+            oRouter.navTo("RouteCreateOrder"); // Navigate to target route
         },
+        onRowNavigate: function (){
+            var oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteDetailOrder");
+        },
+        onEditOrder: function (){
+            var oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteEditOrder");
+        }
 
         // Triggered when row "Details" button is pressed
         // onRowNavigate: function (oEvent) {

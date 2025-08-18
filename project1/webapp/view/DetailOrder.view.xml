@@ -3,7 +3,7 @@
     xmlns="sap.m"
     controllerName="com.sapui5.casestudy.group4.project1.controller.DetailOrder">
 
-    <Page id="page2" title="Edit Order">
+    <Page id="page2" title="Detail Order">
         
     </Page>
 </mvc:View>
