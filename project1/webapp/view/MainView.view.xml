@@ -1,6 +1,5 @@
-<mvc:View controllerName="com.sapui5.casestudy.group4.project1.controller.MainView"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sapui5.casestudy.group4.project1.controller.MainView">
     <Page id="page" title="{i18n>title}">
+    <Button press="onCreateOrder" icon="sap-icon://add" id="btn_createOrder" tooltip="Add Order"/>
     </Page>
 </mvc:View>

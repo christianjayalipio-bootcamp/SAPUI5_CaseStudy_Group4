@@ -79,12 +79,23 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "RouteCreateOrder",
+          "pattern": "createOrder",
+          "target": [
+            "TargetCreateOrder"
+          ]
         }
       ],
       "targets": {
         "TargetMainView": {
-          "id": "MainView",
-          "name": "MainView"
+          "viewName": "MainView",
+          "viewId": "MainView"
+        },
+        "TargetCreateOrder": {
+          "viewName": "CreateOrder",
+          "viewId": "CreateOrder"
         }
       }
     },
