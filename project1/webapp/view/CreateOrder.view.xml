@@ -2,8 +2,81 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     controllerName="com.sapui5.casestudy.group4.project1.controller.CreateOrder">
-
-    <Page id="page3" title="Create Order">
-        
+    <Page id="page3" title="Create Order" floatingFooter="true">
+        <content>
+        <Panel xmlns="sap.m" width="auto" expanded="true" id="panel1" class="sapUiResponsiveMargin">
+            <headerToolbar>
+                <Toolbar id="toolbar1">
+                    <Title id="_IDGenTitle" text="Order Details"/>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer"/>
+                    </Toolbar>       
+            </headerToolbar>
+            <content>
+            <HBox id="_IDGenHBox" justifyContent="Center" >
+            <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ColumnLayout" id="form0">
+            <sap.ui.layout.form:content>
+                <Label xmlns="sap.m" text="Receiving Plant" id="label0" required="true"/>
+                <Input xmlns="sap.m" id="recPlant" type="Text" value="" placeholder="" showValueHelp="true" valueHelpRequest=".onValueHelpRequest" width="15rem"/>
+                <Label xmlns="sap.m" text="Delivering Plant" id="label1" required="true"/>
+                <Input xmlns="sap.m" id="delPlant" type="Text" value="" placeholder="" showValueHelp="true" valueHelpRequest=".onValueHelpRequest" width="15rem"/>
+            </sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm> 
+            </HBox>  
+            </content>
+            </Panel>
+        <Panel xmlns="sap.m" width="auto" expanded="true" id="panel0" class="sapUiResponsiveMargin">
+            <headerToolbar>
+                <Toolbar id="toolbar1_1755502251171">
+                    <Title id="_IDGenTitle2" text="Header"/>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+                    <Button xmlns="sap.m" id="button1" icon="sap-icon://add"/>
+                    <content>
+                        <Button xmlns="sap.m" id="button2" icon="sap-icon://delete"/>
+                    </content>
+                    </Toolbar>
+            </headerToolbar>
+            <content>
+                <Table noDataText="No Data" items="{/products}" id="table0">
+                    <items>
+                        <ColumnListItem type="Active" id="item0">
+                            <cells>
+                                <Text text="Row 1 Cell 1" id="text0"/>
+                                <Text text="Row 1 Cell 2" id="text1"/>
+                                <Text text="Row 1 Cell 3" id="text2"/>
+                                <Text text="Row 1 Cell 4" id="text3"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                    <columns>
+                        <Column id="column0">
+                            <header>
+                                <Label text="Product Name" id="label0_1755502754996"/>
+                            </header>
+                        </Column>
+                        <Column id="column1">
+                            <header>
+                                <Label text="Quantity" id="label1_1755502754996"/>
+                            </header>
+                        </Column>
+                        <Column id="column2">
+                            <header>
+                                <Label text="Price Per Quantity" id="label2"/>
+                            </header>
+                        </Column>
+                        <Column  id="column3">
+                            <header>
+                                <Label text="Total Price" id="label3"/>
+                            </header>
+                        </Column></columns></Table>
+            </content>
+            </Panel>
+    </content>
+    <footer>
+        <OverflowToolbar id="_IDGenOverflowToolbar1">
+            <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+            <Button id="btn_save" text="Save" tooltip="Save" type="Accept"/>
+            <Button id="btn_cancel" text="Cancel" tooltip="Cancel" type="Reject"/>
+        </OverflowToolbar>
+    </footer>
     </Page>
 </mvc:View>
