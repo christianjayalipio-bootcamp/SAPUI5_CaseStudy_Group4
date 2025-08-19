@@ -12,197 +12,205 @@
     >
         <content>
             <!-- Form Section -->
-            <sap.ui.layout.form:SimpleForm
-                editable="true"
-                layout="ResponsiveGridLayout"
-                id="form0"
-            >
-                <sap.ui.layout.form:content>
-                    <FlexBox
-                        id="flexBox0"
-                        alignItems="Start"
-                        justifyContent="Center"
-                        wrap="Wrap"
-                    >
-                        <items>
-                            <VBox class="sapUiSmallMarginEnd">
-                                <Label text="Order Number" />
-                                <Input
-                                    width="250px"
-                                    placeholder="Order Number"
-                                />
-                            </VBox>
-
-                            <VBox class="sapUiSmallMarginEnd">
-                                <Label text="Creation Date" />
-                                <DatePicker
-                                    width="250px"
-                                    id="picker0"
-                                />
-                            </VBox>
-
-                            <VBox class="sapUiSmallMarginEnd">
-                                <Label text="Status" />
-                                <ComboBox
-                                    width="250px"
-                                    id="box0"
-                                >
-                                    <items>
-                                        <core:Item
-                                            key="item-1-key"
-                                            text="Created"
-                                            id="item0"
-                                        />
-                                        <core:Item
-                                            key="item-2-key"
-                                            text="Released"
-                                            id="item1"
-                                        />
-                                        <core:Item
-                                            key="item-3-key"
-                                            text="Partially Completed"
-                                            id="item2"
-                                        />
-                                        <core:Item
-                                            key="item-4-key"
-                                            text="Delivered"
-                                            id="item3"
-                                        />
-                                    </items>
-                                </ComboBox>
-                            </VBox>
-
-                            <VBox class="sapUiSmallMarginEnd">
-                                <Label text=" " />
-                                <!-- empty for alignment -->
-                                <HBox>
-                                    <Button
-                                        text="Go"
-                                        tooltip="Edit Order"
-                                        class="sapUiTinyMarginEnd"
-                                        press="onEditOrder"
+                <sap.ui.layout.form:SimpleForm
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    id="form0"
+                >
+                    <sap.ui.layout.form:content>
+                        <FlexBox
+                            id="flexBox0"
+                            alignItems="Start"
+                            justifyContent="Center"
+                            wrap="Wrap"
+                        >
+                            <items>
+                                <VBox class="sapUiSmallMarginEnd">
+                                    <Label text="Order Number" />
+                                    <Input
+                                        width="250px"
+                                        placeholder="Order Number"
                                     />
-                                    <Button text="Clear" />
-                                </HBox>
-                            </VBox>
-                        </items>
-                    </FlexBox>
-                </sap.ui.layout.form:content>
-            </sap.ui.layout.form:SimpleForm>
+                                </VBox>
 
+                                <VBox class="sapUiSmallMarginEnd">
+                                    <Label text="Creation Date" />
+                                    <DatePicker
+                                        width="auto"
+                                        id="picker0"
+                                    />
+                                </VBox>
+
+                                <VBox class="sapUiSmallMarginEnd">
+                                    <Label text="Status" />
+                                    <ComboBox
+                                        width="auto"
+                                        id="box0"
+                                    >
+                                        <items>
+                                            <core:Item
+                                                key="item-1-key"
+                                                text="Created"
+                                                id="item0"
+                                            />
+                                            <core:Item
+                                                key="item-2-key"
+                                                text="Released"
+                                                id="item1"
+                                            />
+                                            <core:Item
+                                                key="item-3-key"
+                                                text="Partially Completed"
+                                                id="item2"
+                                            />
+                                            <core:Item
+                                                key="item-4-key"
+                                                text="Delivered"
+                                                id="item3"
+                                            />
+                                        </items>
+                                    </ComboBox>
+                                </VBox>
+
+                                <VBox class="sapUiSmallMarginEnd">
+                                    <Label text=" " />
+                                    <!-- empty for alignment -->
+                                    <HBox>
+                                        <Button
+                                            text="Go"
+                                            tooltip="Edit Order"
+                                            class="sapUiTinyMarginEnd"
+                                            press="onEditOrder"
+                                        />
+                                        <Button text="Clear" />
+                                    </HBox>
+                                </VBox>
+                            </items>
+                        </FlexBox>
+                    </sap.ui.layout.form:content>
+                </sap.ui.layout.form:SimpleForm>
+   
             <!-- Table Section -->
-            <Table
-                id="table1"
-                inset="false"
-                noDataText="Drop column list items here and columns in the area above"
-                mode="MultiSelect"
+            <Panel
+                xmlns="sap.m"
+                width="auto"
+                expanded="true"
+                id="panel0"
+                class="sapUiResponsiveMargin"
             >
-                <!-- Toolbar with Title + Buttons -->
-                <headerToolbar>
-                    <OverflowToolbar>
-                        <Title text="Orders(1)" />
-                        <ToolbarSpacer />
-                        <Button
-                            icon="sap-icon://add"
-                            tooltip="Add Order"
-                            press="onAddOrder"
-                        />
-                        <Button
-                            icon="sap-icon://delete"
-                            tooltip="Delete Order"
-                            press="onDeleteOrder"
-                        />
-                    </OverflowToolbar>
-                </headerToolbar>
-
-                <!-- Table Rows -->
-                <items>
-                    <ColumnListItem
-                        type="Active"
-                        id="item1_1755502811792"
-                    >
-                        <cells>
-                            <Text
-                                text="Sample data"
-                                id="text4"
-                            />
-                            <Text
-                                text="Sample data"
-                                id="text5"
-                            />
-                            <Text
-                                text="Sample data"
-                                id="text6"
-                            />
-                            <Text
-                                text="Sample data"
-                                id="text7"
-                            />
-                            <Text
-                                text="Sample data"
-                                id="text8"
+                <Table
+                    id="table1"
+                    inset="false"
+                    noDataText="Drop column list items here and columns in the area above"
+                    mode="MultiSelect"
+                >
+                    <!-- Toolbar with Title + Buttons -->
+                    <headerToolbar>
+                        <OverflowToolbar>
+                            <Title text="Orders(1)" />
+                            <ToolbarSpacer />
+                            <Button
+                                icon="sap-icon://add"
+                                tooltip="Add Order"
+                                press="onAddOrder"
                             />
                             <Button
-                                text="Details"
-                                tooltip="Details"
-                                press="onRowNavigate"
+                                icon="sap-icon://delete"
+                                tooltip="Delete Order"
+                                press="onDeleteOrder"
                             />
-                        </cells>
-                    </ColumnListItem>
-                </items>
+                        </OverflowToolbar>
+                    </headerToolbar>
 
-                <!-- Table Columns -->
-                <columns>
-                    <Column id="column3">
-                        <header>
-                            <Label
-                                text="Order Number"
-                                id="label7"
-                            />
-                        </header>
-                    </Column>
-                    <Column id="column4">
-                        <header>
-                            <Label
-                                text="Creation Date"
-                                id="label8"
-                            />
-                        </header>
-                    </Column>
-                    <Column id="column5">
-                        <header>
-                            <Label
-                                text="Receiving Plant"
-                                id="label9"
-                            />
-                        </header>
-                    </Column>
-                    <Column id="column6">
-                        <header>
-                            <Label
-                                text="Delivering Plant"
-                                id="label10"
-                            />
-                        </header>
-                    </Column>
-                    <Column id="column7">
-                        <header>
-                            <Label
-                                text="Status"
-                                id="label11"
-                            />
-                        </header>
-                    </Column>
-                    <Column
-                        hAlign="Center"
-                        width="120px"
-                    >
-                        <header>
-                            <Label text="Action" />
-                        </header>
-                    </Column>
-                </columns>
-            </Table>
+                    <!-- Table Rows -->
+                    <items>
+                        <ColumnListItem
+                            type="Active"
+                            id="item1_1755502811792"
+                        >
+                            <cells>
+                                <Text
+                                    text="Sample data"
+                                    id="text4"
+                                />
+                                <Text
+                                    text="Sample data"
+                                    id="text5"
+                                />
+                                <Text
+                                    text="Sample data"
+                                    id="text6"
+                                />
+                                <Text
+                                    text="Sample data"
+                                    id="text7"
+                                />
+                                <Text
+                                    text="Sample data"
+                                    id="text8"
+                                />
+                                <Button
+                                    text="Details"
+                                    tooltip="Details"
+                                    press="onRowNavigate"
+                                />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+
+                    <!-- Table Columns -->
+                    <columns>
+                        <Column id="column3">
+                            <header>
+                                <Label
+                                    text="Order Number"
+                                    id="label7"
+                                />
+                            </header>
+                        </Column>
+                        <Column id="column4">
+                            <header>
+                                <Label
+                                    text="Creation Date"
+                                    id="label8"
+                                />
+                            </header>
+                        </Column>
+                        <Column id="column5">
+                            <header>
+                                <Label
+                                    text="Receiving Plant"
+                                    id="label9"
+                                />
+                            </header>
+                        </Column>
+                        <Column id="column6">
+                            <header>
+                                <Label
+                                    text="Delivering Plant"
+                                    id="label10"
+                                />
+                            </header>
+                        </Column>
+                        <Column id="column7">
+                            <header>
+                                <Label
+                                    text="Status"
+                                    id="label11"
+                                />
+                            </header>
+                        </Column>
+                        <Column
+                            hAlign="Center"
+                            width="120px"
+                        >
+                            <header>
+                                <Label text="Action" />
+                            </header>
+                        </Column>
+                    </columns>
+                </Table>
+            </Panel>
         </content>
     </Page>
 </mvc:View>
