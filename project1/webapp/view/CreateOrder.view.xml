@@ -37,7 +37,7 @@
                     </Toolbar>
             </headerToolbar>
             <content>
-                <Table noDataText="No Data" items="{/products}" id="table0">
+                <Table noDataText="No Data" items="{/products}" id="tbl_products">
                     <items>
                         <ColumnListItem type="Active" id="products">
                             <cells>
@@ -50,7 +50,7 @@
                         </ColumnListItem>
                     </items>
                     <columns>
-                        <Column id="col1_checkBox" width="2rem">
+                        <Column id="col1_checkBox" width="3rem">
                             <header>
                                 <CheckBox id="cb_selectAll" select="onSelectAll" />
                             </header>
